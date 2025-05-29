@@ -18,6 +18,7 @@ void suman(){
 int main() {
     char code[10];
     char numberCode[10];
+    int totalSapaati;
     int balance = 0, choice, sapaati, exitEnter = 0;
     int oneday = 30, sevenday = 100, thirtyday = 1000;
     int onevoice = 40, sevenvoice = 150, thirtyvoice = 1200;
@@ -85,11 +86,12 @@ int main() {
                 	printf("\n\n\n                                                   Maximum limit is: 200Rs!!!");
                     printf("\n\n\n\n\n\n                                                     Enter Saapati amount: ");
                     scanf("%d", &sapaati);
-                    if(sapaati <= 200){
-                    	balance += sapaati; 
+                    if(totalSapaati +sapaati <= 200){
+                    	balance += sapaati;
+						totalSapaati += sapaati;
                     clr();
                     printf("\n\n\n\n\n\n                                                     Total balance: %d Rs\n", balance);
-					 }   
+					 } 
 					else {
 						clr();
 						printf("\n\n\n\n\n                                              You cannot able to load more than 200rs !!!\n");
@@ -241,4 +243,3 @@ int main() {
     printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n                                                     Task complete!\n");
     return 0;
 }
-
